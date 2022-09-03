@@ -42,7 +42,7 @@ def draw_gradio_ui(opt, img2img=lambda x: x, txt2img=lambda x: x,imgproc=lambda 
                                                 value=txt2img_defaults['cfg_scale'], elem_id='cfg_slider')
                         txt2img_seed = gr.Textbox(label="Seed (blank to randomize)", lines=1, max_lines=1,
                                                   value=txt2img_defaults["seed"])
-                        txt2img_batch_count = gr.Slider(minimum=1, maximum=50, step=1,
+                        txt2img_batch_count = gr.Slider(minimum=1, maximum=1000, step=1,
                                                         label='Number of images to generate',
                                                         value=txt2img_defaults['n_iter'])
 
